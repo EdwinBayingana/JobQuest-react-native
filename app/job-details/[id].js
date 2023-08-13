@@ -1,7 +1,30 @@
-import React from 'react';
+import {
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  ActivityIndicator,
+  RefreshControl,
+} from 'react-native';
+import { Stack, useRouter, useSearchParams } from 'expo-router';
+import { useState, useCallback } from 'react';
+
+import {
+  Company,
+  JobAbout,
+  JobTabs,
+  ScreenHeaderBtn,
+  Specifics,
+} from '../../components';
+import { COLORS, icons, SIZES } from '../../constants';
+import useFetch from '../../hook/useFetch';
 
 const JobDetails = () => {
-  return <div>[id]</div>;
+  const params = useSearchParams();
+  const router = useRouter;
+
+  const { data, isLoading, error, refetch } = useFetch();
+  return <Text>JobDetails</Text>;
 };
 
 export default JobDetails;
