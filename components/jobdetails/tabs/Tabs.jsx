@@ -22,7 +22,7 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
           <TabButton
             name={item}
             activeTab={activeTab}
-            onhandleSearchType={() => setActiveTab(item)}
+            onHandleSearchType={() => setActiveTab(item)}
           />
         )}
         horizontal
