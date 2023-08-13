@@ -10,11 +10,16 @@ import {
 import { useRouter } from 'expo-router';
 
 import styles from './welcome.style';
+import { icons, SIZES } from '../../../constants';
 
 const Welcome = () => {
+  const router = useRouter();
   return (
     <View>
-      <Text>Welcome</Text>
+      <View style={styles.container}>
+        <Text style={styles.userName}>Hello Edwin</Text>
+        <Text style={styles.welcomeMessage}>Find your perfect Job</Text>
+      </View>
     </View>
   );
 };
