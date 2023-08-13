@@ -18,4 +18,35 @@ const useFetch = (endpoint, query) => {
     },
     params: { ...query },
   };
+
+  const fetchData = async () => {
+    setIsLoading(true);
+
+    try {
+      const response = await axios.request(options);
+      setData(response.data.data);
+      setIsLoading(false);
+    } catch (error) {
+      setError(error);
+      alert('There is a problem fetching job data');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const refetch = () => {
+    setIsLoading(false);
+    fetchData();
+  };
+
+  return {
+    data,
+    isLoading,
+    error,
+    refetch,
+  };
 };
