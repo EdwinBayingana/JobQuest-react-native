@@ -1,3 +1,14 @@
-# JobQuest-react-native
+# Expo Router Example
 
-This a mobile app built using react-native on which users can browse through available/listed jobs and view more details on each listed job.
+Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+
+## 🚀 How to use
+
+```sh
+npx create-expo-app -e with-router
+```
+
+## 📝 Notes
+
+- [Expo Router: Docs](https://expo.github.io/router)
+- [Expo Router: Repo](https://github.com/expo/router)
